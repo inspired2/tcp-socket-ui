@@ -2953,7 +2953,6 @@ dependencies = [
 [[package]]
 name = "tcp_smart_socket"
 version = "0.1.0"
-source = "git+https://github.com/inspired2/stp.git?branch=async#833e92cec10a5e534d0f7b2b6abd8ccaa4a782c2"
 dependencies = [
  "serde",
  "serde_json",
