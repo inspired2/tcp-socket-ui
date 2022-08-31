@@ -6,9 +6,9 @@ import Greet from "./components/Greet.vue";
 
 <template>
   <div class="container">
-    <h1>Welcome to Tauri!</h1>
+    <h1>Welcome to Smart Socket Controller UI</h1>
 
-    <div class="row">
+    <!-- <div class="row">
       <a href="https://vitejs.dev" target="_blank">
         <img src="/vite.svg" class="logo vite" alt="Vite logo" />
       </a>
@@ -38,7 +38,7 @@ import Greet from "./components/Greet.vue";
       <a href="https://github.com/rust-lang/rust-analyzer" target="_blank"
         >rust-analyzer</a
       >
-    </p>
+    </p> -->
 
     <Greet />
   </div>
