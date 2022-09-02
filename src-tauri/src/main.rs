@@ -31,7 +31,9 @@ impl ManagedState {
         async fn turn_off(&mut self) -> Result<ExecutionResult, String> {
         if let Some(mut client) = self.client.take() {
             let res = client.turn_off().await;
-            self.client = Some(client);
+            if res.is_ok() {self.client = Some(client);}
+                        println!("res: {:?}", res);
+
             res
         } else {
             Ok(ExecutionResult::Error(CustomError::CommandExecutionFailure("Client not connected to remote socket. Connect first".into())))
@@ -40,7 +42,8 @@ impl ManagedState {
         async fn status(&mut self) -> Result<ExecutionResult, String> {
         if let Some(mut client) = self.client.take() {
             let res = client.get_status().await;
-            self.client = Some(client);
+            if res.is_ok() {self.client = Some(client);}
+            println!("res: {:?}", res);
             res
         } else {
             Ok(ExecutionResult::Error(CustomError::CommandExecutionFailure("Client not connected to remote socket. Connect first".into())))
