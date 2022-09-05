@@ -3,7 +3,7 @@ import { ref } from "vue";
 import { invoke } from "@tauri-apps/api/tauri";
 
 const greetMsg = ref("");
-const address = ref("");
+const address = ref("127.0.0.1:8282");
 
 async function turn_on() {
   greetMsg.value = await invoke("turn_on");

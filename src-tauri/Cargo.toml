@@ -15,8 +15,8 @@ tauri-build = { version = "1.0.0", features = [] }
 
 [dependencies]
 tokio = { version = "*", features = ["full"] }
-#tcp_smart_socket = { git = "https://github.com/inspired2/stp.git", branch = "async"}
-tcp_smart_socket = { path = "../../stp/"}
+tcp_smart_socket = { git = "https://github.com/inspired2/stp.git", branch = "async"}
+#tcp_smart_socket = { path = "../../stp/"}
 serde_json = "1.0"
 serde = { version = "1.0", features = ["derive"] }
 tauri = { version = "1.0.0", features = ["api-all"] }
